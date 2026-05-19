@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <title>Filephile – Universal File Transformer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Favicon directly under title -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <style>
     :root {
@@ -49,7 +52,7 @@
       margin: 0 auto;
     }
 
-    /* GITHUB BANNER */
+    /* GitHub Banner */
     .gh-banner {
       max-width: 900px;
       margin: 0 auto 1rem;
@@ -62,10 +65,6 @@
       justify-content: space-between;
       font-size: 0.9rem;
       border: 1px solid var(--border);
-    }
-
-    .gh-banner span {
-      opacity: 0.9;
     }
 
     .gh-badge {
@@ -81,7 +80,7 @@
       color: #111827;
     }
 
-    /* TOP CONTROLS */
+    /* Top Controls */
     .top-controls {
       display: flex;
       justify-content: flex-end;
@@ -102,11 +101,7 @@
       gap: 0.25rem;
     }
 
-    .chip-btn span {
-      font-size: 0.9rem;
-    }
-
-    /* LOGO HEADER */
+    /* Logo Header */
     .logo-header {
       display: flex;
       align-items: center;
@@ -119,15 +114,13 @@
       width: 70px;
       height: 70px;
       border-radius: 50%;
-      box-shadow: 0 0 25px rgba(59, 130, 246, 0.45);
       overflow: hidden;
-      flex-shrink: 0;
+      box-shadow: 0 0 25px rgba(59, 130, 246, 0.45);
     }
 
     .logo-mark svg {
       width: 100%;
       height: 100%;
-      display: block;
     }
 
     .logo-text h1 {
@@ -142,7 +135,7 @@
       margin-top: 0.25rem;
     }
 
-    /* DESCRIPTION */
+    /* Description */
     .description {
       text-align: center;
       max-width: 700px;
@@ -151,7 +144,7 @@
       font-size: 1rem;
     }
 
-    /* GLASS CARD */
+    /* Cards */
     .card {
       background: var(--card);
       backdrop-filter: blur(var(--blur));
@@ -168,7 +161,7 @@
       color: var(--accent);
     }
 
-    /* UPLOAD */
+    /* Upload */
     .upload-area {
       border: 2px dashed var(--border);
       padding: 2rem;
@@ -198,7 +191,7 @@
       display: none !important;
     }
 
-    /* SELECT */
+    /* Select */
     select {
       width: 100%;
       padding: 0.75rem;
@@ -213,7 +206,7 @@
       background: #ffffff;
     }
 
-    /* BUTTON */
+    /* Buttons */
     .primary-btn {
       background: var(--accent);
       border: none;
@@ -250,7 +243,7 @@
       color: var(--subtext);
     }
 
-    /* HOW IT WORKS */
+    /* How It Works */
     .how-it-works {
       background: var(--card);
       padding: 1.5rem;
@@ -274,7 +267,211 @@
       margin-bottom: 0.75rem;
     }
 
-    /* DONATION FOOTER */
+    /* Donation Footer */
     .donate-box {
       margin-top: 2rem;
-      padding
+      padding: 1.5rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      backdrop-filter: blur(var(--blur));
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.25);
+    }
+
+    .donate-box h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+
+    .donate-box p {
+      color: var(--subtext);
+      margin-bottom: 1rem;
+    }
+
+    .cash-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #16a34a, #065f46);
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 0 15px rgba(22, 163, 74, 0.4);
+      transition: 0.25s;
+    }
+
+    .cash-btn:hover {
+      background: linear-gradient(135deg, #22c55e, #047857);
+      box-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- GitHub-style banner -->
+  <div class="gh-banner">
+    <span data-i18n="bannerText">Filephile · Open web tool for universal file transformation</span>
+    <span class="gh-badge">GitHub Ready</span>
+  </div>
+
+  <div class="app">
+
+    <!-- Top controls -->
+    <div class="top-controls">
+      <button id="langToggle" class="chip-btn"><span>🌐</span><span id="langLabel">EN</span></button>
+      <button id="themeToggle" class="chip-btn"><span>🌓</span><span id="themeLabel">Dark</span></button>
+    </div>
+
+    <!-- LOGO HEADER -->
+    <header class="logo-header">
+      <div class="logo-mark">
+        <!-- SVG Logo -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+          <defs>
+            <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#3b82f6"/>
+              <stop offset="100%" stop-color="#1e3a8a"/>
+            </linearGradient>
+          </defs>
+          <circle cx="128" cy="128" r="120" fill="url(#g)"/>
+          <text x="50%" y="57%" font-size="150" font-family="Segoe UI, system-ui, sans-serif"
+                font-weight="700" fill="white" text-anchor="middle" dominant-baseline="middle">F</text>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <h1 data-i18n="titleMain">Filephile</h1>
+        <p class="tagline" data-i18n="tagline">Transform any file. Any format. Anywhere.</p>
+      </div>
+    </header>
+
+    <!-- DESCRIPTION -->
+    <p class="description" data-i18n="description">
+      Filephile is a universal file transformer that converts images, documents, audio, video, and archives
+      into the formats you need. Upload, choose your output, and instantly download or share your transformed file.
+    </p>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works">
+      <h2 data-i18n="howTitle">How Filephile Works</h2>
+      <ol class="how-list">
+        <li data-i18n="how1"><strong>Upload your file.</strong> Choose any supported file type.</li>
+        <li data-i18n="how2"><strong>Select your output format.</strong> Filephile shows compatible options.</li>
+        <li data-i18n="how3"><strong>Transform instantly.</strong> Images convert fully in‑browser.</li>
+        <li data-i18n="how4"><strong>Download or share.</strong> Save locally or send to your cloud apps.</li>
+      </ol>
+    </section>
+
+    <!-- MAIN APP -->
+    <main>
+
+      <!-- Upload -->
+      <section class="card">
+        <h2 data-i18n="step1Title">1. Upload File</h2>
+        <label class="upload-area">
+          <input id="fileInput" type="file" />
+          <span data-i18n="uploadPrompt">Click to upload a file</span>
+        </label>
+        <div id="fileInfo" class="file-info hidden"></div>
+      </section>
+
+      <!-- Options -->
+      <section class="card">
+        <h2 data-i18n="step2Title">2. Choose Output Format</h2>
+        <select id="formatSelect"></select>
+        <p class="note" data-i18n="note">Images convert fully. Other files export with the new extension.</p>
+      </section>
+
+      <!-- Transform -->
+      <section class="card">
+        <h2 data-i18n="step3Title">3. Transform</h2>
+        <button id="transformBtn" class="primary-btn" disabled data-i18n="transformBtn">Transform File</button>
+        <div id="status" class="status"></div>
+      </section>
+
+      <!-- Download -->
+      <section class="card">
+        <h2 data-i18n="step4Title">4. Download</h2>
+        <a id="downloadLink" class="primary-btn hidden" download data-i18n="downloadBtn">Download File</a>
+      </section>
+
+    </main>
+
+    <!-- DONATION FOOTER -->
+    <div class="donate-box">
+      <h3 data-i18n="donateTitle">Support Filephile</h3>
+      <p data-i18n="donateText">If Filephile helped you, consider sending a small thank‑you.</p>
+      <a class="cash-btn" href="https://cash.app/$tabbcashtagg" target="_blank" data-i18n="donateButton">
+        Send a Tip via $tabbcashtagg
+      </a>
+    </div>
+
+  </div>
+
+  <script>
+    const fileInput = document.getElementById("fileInput");
+    const fileInfo = document.getElementById("fileInfo");
+    const formatSelect = document.getElementById("formatSelect");
+    const transformBtn = document.getElementById("transformBtn");
+    const statusEl = document.getElementById("status");
+    const downloadLink = document.getElementById("downloadLink");
+
+    const langToggle = document.getElementById("langToggle");
+    const langLabel = document.getElementById("langLabel");
+    const themeToggle = document.getElementById("themeToggle");
+    const themeLabel = document.getElementById("themeLabel");
+
+    let currentFile = null;
+    let fileType = null;
+    let currentLang = "en";
+
+    const translations = {
+      en: {
+        bannerText: "Filephile · Open web tool for universal file transformation",
+        titleMain: "Filephile",
+        tagline: "Transform any file. Any format. Anywhere.",
+        description:
+          "Filephile is a universal file transformer that converts images, documents, audio, video, and archives into the formats you need. Upload, choose your output, and instantly download or share your transformed file.",
+        howTitle: "How Filephile Works",
+        how1: "Upload your file. Choose any supported file type.",
+        how2: "Select your output format. Filephile shows compatible options.",
+        how3: "Transform instantly. Images convert fully in‑browser.",
+        how4: "Download or share. Save locally or send to your cloud apps.",
+        step1Title: "1. Upload File",
+        step2Title: "2. Choose Output Format",
+        step3Title: "3. Transform",
+        step4Title: "4. Download",
+        uploadPrompt: "Click to upload a file",
+        note: "Images convert fully. Other files export with the new extension.",
+        transformBtn: "Transform File",
+        downloadBtn: "Download File",
+        donateTitle: "Support Filephile",
+        donateText: "If Filephile helped you, consider sending a small thank‑you.",
+        donateButton: "Send a Tip via $tabbcashtagg"
+      },
+      es: {
+        bannerText: "Filephile · Herramienta web abierta para transformar archivos",
+        titleMain: "Filephile",
+        tagline: "Transforma cualquier archivo. Cualquier formato. En cualquier lugar.",
+        description:
+          "Filephile es un transformador universal de archivos que convierte imágenes, documentos, audio, video y archivos comprimidos al formato que necesitas. Sube tu archivo, elige el formato y descárgalo o compártelo al instante.",
+        howTitle: "Cómo funciona Filephile",
+        how1: "Sube tu archivo. Elige cualquier tipo de archivo compatible.",
+        how2: "Selecciona el formato de salida. Filephile muestra las opciones compatibles.",
+        how3: "Transforma al instante. Las imágenes se convierten directamente en el navegador.",
+        how4: "Descarga o comparte. Guarda localmente o envía a tus aplicaciones en la nube.",
+        step1Title: "1. Subir archivo",
+        step2Title: "2. Elegir formato de salida",
+        step3Title: "3. Transformar",
+        step4Title: "4. Descargar",
+        uploadPrompt: "Haz clic para subir un archivo",
+        note: "Las imágenes se convierten por completo. Otros archivos se exportan con la nueva extensión.",
+        transformBtn: "Transformar archivo",
+        downloadBtn: "Descargar archivo",
+        donateTitle: "Apoya Filephile",
+        donateText: "Si Filephile te fue útil, considera enviar un pequeño agradecimiento.",
+        donateButton: "Enviar propina a $tabbcashtagg"
+      }
+   
