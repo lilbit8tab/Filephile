@@ -56,9 +56,5 @@ Whether you need to resize an image, convert a PDF to DOCX, extract audio from a
    - Documents, audio, and video are securely transformed on the backend  
 
 4. **Download, share, or save**  
-   Once your file is ready, download it or use your browser’s share options to send it to your cloud services.
-
----
-
-## 📁 Project Structure
+   Once your file is ready, download it or use your browser’s share options to send it to your cloud.
 
